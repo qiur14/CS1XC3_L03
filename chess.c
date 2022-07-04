@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdbool.h>
 
 int main () {
@@ -31,4 +32,54 @@ int main () {
   } while (buf[0] != 'q' && buf[0] != 'Q') ;
     
 	printf("Terminating...\n") ;
+=======
+#include <stdio.h>
+#include <stdbool.h>
+
+// ♔ ♕ ♖ ♗ ♘ ♙
+
+/* ┌ └ ┐ ┘
+
+├ ┤ ┬ ┴
+ 
+─ │ ┼
+ 
+*/
+void showBoard (int board[8][8]) {
+	printf("\n\n┌─┬─┬─┬─┬─┬─┬─┬─┐\n");
+	for (int i = 0; i < 8; i++) {
+//		printf("│"); 
+		bool flag = true;
+		for (int j = 0; j < 8; j++) {
+			if (!flag) {
+				printf("│"); 
+			}
+			flag = false;
+//			printf(""); 
+			switch (board[i][j]) {
+				case 0: 
+					printf(" ");
+					break;
+				case 1:
+					printf("♔");
+					break;
+				case 2: 
+					printf("♕");
+					break;
+				case 3: 
+					printf("♗");
+					break;
+				case 4: 
+					printf("♘");
+					break;
+				case 5: 
+					printf("♙");
+			}
+		}
+		printf("│\n") ;
+		if (i < 7) {
+			printf("├─┼─┼─┼─┼─┼─┼─┼─┤\n") ;
+		}
+	}
+	printf("└─┴─┴─┴─┴─┴─┴─┴─┘\n");
 }
