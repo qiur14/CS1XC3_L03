@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <stdbool.h>
 
 int main () {
@@ -47,10 +48,18 @@ int main () {
 */
 void showBoard (int board[8][8]) {
 	printf("\n\n┌─┬─┬─┬─┬─┬─┬─┬─┐\n");
+=======
+#include <stdio.h>
+
+
+// ♔ ♕ ♖ ♗ ♘ ♙
+void showBoard (int board[8][9]) {
+>>>>>>> origin/Show_Board
 	for (int i = 0; i < 8; i++) {
 //		printf("│"); 
 		bool flag = true;
 		for (int j = 0; j < 8; j++) {
+<<<<<<< HEAD
 			if (!flag) {
 				printf("│"); 
 			}
@@ -82,4 +91,28 @@ void showBoard (int board[8][8]) {
 		}
 	}
 	printf("└─┴─┴─┴─┴─┴─┴─┴─┘\n");
+=======
+			if (board[i][j] == 0) {
+				if ((i + j) % 2 == 0) {
+					printf(" ");
+				} else {
+					printf("▒");
+				}
+			} else if (board[i][j] == 1) {
+				printf("♔");
+ 			} else if (board[i][j] == 2) {
+				printf("♕");
+			} else if (board[i][j] == 3) {
+				printf("♖");
+			} else if (board[i][j] == 4) {
+				printf("♗");
+			} else if (board[i][j] == 5) {
+				printf("♘");
+			} else if (board[i][j] == 6) {
+				printf("♙");
+			}
+		}
+		printf("\n");
+	}
 }
+
