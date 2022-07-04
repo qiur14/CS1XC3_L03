@@ -45,8 +45,13 @@ int main () {
  
 ─ │ ┼
  
+ might need these...
+ 
+ ╟ ╢ ╧ ╤
+ 
 */
 void showBoard (int board[8][8]) {
+<<<<<<< HEAD
 	printf("\n\n┌─┬─┬─┬─┬─┬─┬─┬─┐\n");
 =======
 #include <stdio.h>
@@ -65,6 +70,11 @@ void showBoard (int board[8][8]) {
 	for (int i = 0; i < 8; i++) {
 		printf("%d ", i); 
 >>>>>>> origin/coordinates
+=======
+	printf("\n\n╔════════╗\n");
+	for (int i = 0; i < 8; i++) {
+		printf("║"); 
+>>>>>>> origin/Show_Board_Prettier
 		for (int j = 0; j < 8; j++) {
 <<<<<<< HEAD
 			if (!flag) {
@@ -92,6 +102,7 @@ void showBoard (int board[8][8]) {
 					printf("♙");
 			}
 		}
+<<<<<<< HEAD
 		printf("│\n") ;
 		if (i < 7) {
 			printf("├─┼─┼─┼─┼─┼─┼─┼─┤\n") ;
@@ -120,5 +131,8 @@ void showBoard (int board[8][8]) {
 		}
 		printf("\n");
 	}
+		printf("║\n") ;
+	}
+	printf("╚════════╝\n");
 }
 
